@@ -2,33 +2,34 @@ package miniTesteCinco;
 public class ListGrafosAdjacentes implements Grafos {
 	private List<Vertice> VerticesList = new ArrayList<>;
 	private List<VerticeIn> verticesIn = new ArrayList<>();
-	public void ListGrafosAdjacencias(String nomesVertices) {
-		for (String nomeVertice : nomesVertices) {
-			this.addVertice(nomeVertice);
+	
+	public void ListGrafosAdjacentes(String... nomesDosVertices) {
+		for (String nomeVertices : nomeDosVertices) {
+			this.addVertice(nomeVertices);
 		}
 	}
 	private void addVertice(String nome) {
-		Vertice verticeUm = new Vertice();
+		Vertice vertice = new Vertice();
 		vertice.setNome(nome);
-		vertices.add(verticeUm);
+		vertices.add(vertice);
 
 		VerticeIn vertice = new VerticeIn();
 		verticeIn.setVertice(vertice);
-		verticesIn.add(vertice);
+		verticesIn.add(verticeIn);
 
-		return verticeUm;
+		return vertice;
 	}
 	public Vertice getVertice(String nome) {
-		for (Vertice vertice : vertices) {
+		for (Vertice vertice : vert) {
 			if (vertice.getNome().equals(nome)) {
 				return vertice;
 			}
 		}
 		return null;
 	}
-	private VerticeIn getVerticeInt(Vertice i) {
+	private VerticeIn getVerticeInt(Vertice n) {
 		for (VerticeIn verticeInt : verticesInt) {
-			if (verticeInt.getVertice().equals(i)) {
+			if (verticeInt.getVertice().equals(n)) {
 				return verticeInt;
 			}
 		}
@@ -47,8 +48,10 @@ public class ListGrafosAdjacentes implements Grafos {
 	public boolean segue(Vertice verticeUm, Vertice verticeDois) {
 		for (VerticeIn vertice1 : verticesIn) {
 			if (vertice1.getVertice().equals(verticeUm)) {
-				for (Aresta vert : vertice1.getAresta()) {
-					if (vert.getDestino().equals(verticeDois)) {
+				
+				for (Aresta i : vertice1.getAresta()) {
+					
+					if (i.getDestino().equals(verticeDois)) {
 						return true;
 					}
 				}
