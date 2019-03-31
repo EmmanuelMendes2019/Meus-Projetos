@@ -1,5 +1,5 @@
 package miniTesteCinco;
-public class ListGrafosAdjacentes implements Grafos {
+public class ListGrafosAdjacentes implements grafos {
 	private List<Vertice> VerticesList = new ArrayList<>;
 	private List<VerticeIn> verticesIn = new ArrayList<>();
 	
