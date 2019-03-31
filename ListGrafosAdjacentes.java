@@ -7,7 +7,7 @@ public class ListGrafosAdjacentes implements Grafos {
 			this.addVertice(nomeVertice);
 		}
 	}
-	private void addVertice(String nomeVertice) {
+	private void addVertice(String nome) {
 		Vertice verticeUm = new Vertice();
 		vertice.setNome(nome);
 		vertices.add(verticeUm);
